@@ -1,0 +1,44 @@
+﻿@model List<BLL.DTO.CustomerDTO>
+@{
+    ViewData["Title"] = "Customers List";
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Customers List</title>
+</head>
+<body>
+    <h3>Customers</h3>
+    <a asp-action="Create"><button class="btn btn-success">
+        Add Customer
+    </button></a>
+    <p></p>
+    <table class="table table-dark">
+        <tr>
+            <td>Id</td>
+            <td>Name</td>
+            <td>Position</td>
+            <td>Email</td>
+            <td>Age</td>
+            <td></td>
+        </tr>
+        @foreach (var customer in Model)
+        {
+            <tr>
+                <td>@customer.Id</td>
+                <td>@customer.Name</td>
+                <td>@customer.Position</td>
+                <td>@customer.Email</td>
+                <td>@customer.Age</td>
+                <td>
+                    <a href="@Url.Action("Delete", "Home", new { id = customer.Id })"><button class="btn btn-danger">Delete</button></a>
+                </td>
+                <td>
+                    <a href="@Url.Action("Update", "Home", new { id = customer.Id })"><button class="btn btn-warning">Update</button></a>
+                </td>
+            </tr>
+        }
+    </table>
+</body>
+</html>

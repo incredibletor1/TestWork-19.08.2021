@@ -1,0 +1,26 @@
+﻿@model BLL.DTO.CustomerDTO
+@{
+    ViewBag.Title = "Update Customer";
+}
+
+<form asp-action="update" asp-controller="home">
+    <div class="form-group">
+        <label class="control-label">Name</label>
+        <input class="form-control" placeholder="@Model.Name" disabled/>
+    </div>
+    <div class="form-group">
+        <label asp-for="Age" class="control-label">Age</label>
+        <input type="number" asp-for="Age" class="form-control" placeholder="@Model.Age" required />
+    </div>
+    <div class="form-group">
+        <label asp-for="Email" class="control-label">Email</label>
+        <input type="email" asp-for="Email" class="form-control" placeholder="@Model.Email" required />
+    </div>
+    <div class="form-group">
+        <label asp-for="Position" class="control-label">Position</label>
+        <input type="text" asp-for="Position" class="form-control" placeholder="@Model.Position" required />
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Save" class="btn btn-warning" />
+    </div>
+</form>
