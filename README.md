@@ -1,2 +1,4 @@
 # TestWork-19.08.2021
-Test work, CRUD for Customer entity. There are two versions: .NET Core API(backend)/React(frontend) and .NET Core MVC
+Test work, CRUD for Customer entity. There are two versions: .NET Core API(backend)/React and Redux(frontend) and .NET Core MVC. Both versions are done using the MVC pattern. 
+
+Discription: There are 4 buttons for Create, Update, Delete and Read information about Customer. The interface is intuitive.
